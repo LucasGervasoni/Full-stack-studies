@@ -1,0 +1,64 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Tahoma;
+  text-align: center;
+  margin: 0;
+}
+
+div, blockquote{
+  margin: 0 auto;
+  line-height: 1.8;
+}
+blockquote{
+  margin: 20px 0;
+
+  & p{
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+.logo{
+  max-width: 150px;
+}
+
+.section-1{
+  background-color: #dfdfdf;
+  padding: 10px 0;
+}
+
+.section-languages{
+  max-width: 960px;
+  margin-top: 20px;
+  padding: 10px;
+
+  & img{
+    max-width: 50px;
+  }
+}
+
+h1{
+  font-size: 1.8em;
+}
+
+h2{
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.text-blue{
+  color: #0291dd;
+}
+
+.background-blue{
+  background-color: #0291dd;
+}
+
+.text-white{
+  color: #FFF;
+}

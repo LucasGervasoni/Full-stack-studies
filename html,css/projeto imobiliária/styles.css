@@ -1,0 +1,168 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial;
+}
+
+header{
+  background-color: #B0DDFC;
+  text-align: center;
+  padding: 10px 0 30px;
+
+  & img{
+    max-width: 150px;
+  }
+
+  & ul{
+    
+    & li{
+      display: inline;
+      margin: 5px 5px 0 5px;
+
+      & a{
+        color: black;
+      }
+    }
+  }
+}
+
+.section-about{
+  text-align: center;
+  padding: 30px 0 10px;
+
+  & .img-banner{
+    max-width: 70vw;
+  }
+
+  & div{
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    & .img-imovel{
+      max-width: 40vw;
+      margin: 20px auto;
+    }
+  
+    & h1{
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+  
+    & h2{
+      font-size: 1.2em;
+      font-weight: normal;
+    }
+  
+    & p{
+      text-align: justify;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+.section-services{
+  background-color: #1D80C1;
+  text-align: center;
+  padding: 30px 0 10px;
+  color: #ffffff;
+
+  & h2{
+    font-size: 1.4em;
+  }
+
+  & p{
+    font-size: 1.1em;
+    max-width: 500px;
+    margin: 20px auto 20px;
+
+    & span{
+      font-weight: bold;
+    }
+  }
+
+  & ul{
+    max-width: 120px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 10px 0 10px 30px;
+
+    & li{
+      padding: 5px 0;
+    }
+    
+  }
+}
+
+.section-broker{
+  text-align: center;
+  padding: 30px 0 10px;
+
+  & h2{
+    font-size: 1.4em;
+    text-transform: uppercase;
+  }
+
+  & .img-broker{
+    max-width: 30vw;
+    margin: 20px auto;
+  }
+
+  & p{
+    text-align: justify;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+.section-contact{
+  background-color: #1D80C1;
+  text-align: center;
+  padding: 30px 0 10px;
+  color: #ffffff;
+
+  & h2{
+    text-transform: uppercase;
+    font-size: 1.4em;
+  }
+
+  & iframe{
+    min-width: 70vw;
+    height: 350px;
+    margin: 20px auto;
+  }
+
+  & p{
+    max-width: 960px;
+    padding: 10px 0;
+    margin: 0 auto;
+    background-color: black;
+  }
+
+  & ul {
+    margin: 20px auto;
+
+    & li {
+      padding: 8px;
+  
+      & a{
+        background-color: #ffffff;
+        padding: 5px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+.text-blue{
+  color: #1D80C1;
+}
+
+.text-yellow{
+  color: #F3F844;
+}

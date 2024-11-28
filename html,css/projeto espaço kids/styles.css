@@ -1,0 +1,52 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  font-family: Tahoma;
+}
+
+div{
+  max-width: 960px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+h1{
+  text-decoration: underline;
+  font-size: 2em;
+}
+
+h2, span{
+  color: #bd4348;
+}
+
+h2{
+  font-weight: normal;
+  margin: 20px 0;
+  font-size: 1.6em;
+}
+
+span{
+  font-weight: bold;
+}
+
+p{
+  margin-top: 20px;
+  font-size: 1.2em;
+  line-height: 28px;
+}
+
+a{
+  display: inline-block;
+  color: #FFF;
+  background-color: #bd4348;
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 20px;
+}

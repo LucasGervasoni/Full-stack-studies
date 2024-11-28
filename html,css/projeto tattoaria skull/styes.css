@@ -1,0 +1,60 @@
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div{
+  max-width: 960px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.logo{
+  max-width: 150px;
+  height: 150px;
+}
+
+h1{
+  font-size: 2em;
+}
+
+h2{
+  font-weight: normal;
+  color: #757575;
+  font-size: 1.4em;
+}
+
+p{
+  font-size: 1.2em;
+}
+
+.text-bold{
+  font-weight: bold;
+}
+
+.text-red{
+  color: red;
+}
+
+.section-2 h2{
+  margin-bottom: 10px;
+}
+
+.section-4 p{
+  margin-bottom: 10px;
+}
+
+ul{
+  list-style: none;
+}
+
+li{
+  display: inline;
+  cursor: pointer;
+}
+
+li img{
+  width: 50px;
+  padding: 5px;
+}
