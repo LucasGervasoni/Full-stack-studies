@@ -1,7 +1,6 @@
 import express from 'express';
-import pool from './servico/conexao.js';
 import { cadastraLead } from './servico/cadastra_servico.js';
-import { validarUsuario } from './validacao/valida.js';
+import { validaUsuario } from './validacao/valida.js';
 
 const app = new express();
 
@@ -11,7 +10,7 @@ app.post('/usuarios', async (req, res) => {
   const nome = req.body.nome;
   const email = req.body.email;
 
-  const usuarioValido = validarUsuario(nome, email);
+  const usuarioValido = validaUsuario(nome, email);
 
   if(usuarioValido.status) {
       await cadastraLead(nome, email);
