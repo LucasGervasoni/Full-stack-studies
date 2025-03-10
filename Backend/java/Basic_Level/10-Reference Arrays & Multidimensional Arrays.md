@@ -1,121 +1,135 @@
----
+# Reference Arrays & Multidimensional Arrays
 
 
----
 
-<h1 id="reference-arrays--multidimensional-arrays">Reference Arrays &amp; Multidimensional Arrays</h1>
-<h2 id="reference-arrays"><strong>Reference Arrays</strong></h2>
-<p>Reference arrays store references to objects instead of primitive values. Since objects in Java are stored in the heap, the array only holds the memory addresses of these objects.</p>
-<h3 id="example"><strong>Example</strong></h3>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
-    String name<span class="token punctuation">;</span>
+## **Reference Arrays**
+Reference arrays store references to objects instead of primitive values. Since objects in Java are stored in the heap, the array only holds the memory addresses of these objects.
 
-    <span class="token function">Person</span><span class="token punctuation">(</span>String name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+### **Example**
 
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// Creating an array of references to Person objects</span>
-        Person<span class="token punctuation">[</span><span class="token punctuation">]</span> people <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+```
+class Person {
+    String name;
 
-        <span class="token comment">// Initializing the objects</span>
-        people<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"Carlos"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        people<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"Maria"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        people<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token string">"John"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Person(String name) {
+        this.name = name;
+    }
+}
 
-        <span class="token comment">// Accessing the objects inside the array</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span>Person p <span class="token operator">:</span> people<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+public class Main {
+    public static void main(String[] args) {
+        // Creating an array of references to Person objects
+        Person[] people = new Person[3];
 
-</code></pre>
-<h3 id="explanation"><strong>Explanation</strong></h3>
-<ul>
-<li>The array <code>people</code> contains references to <code>Person</code> objects, not the objects themselves.</li>
-<li>Each element of the array holds a memory address pointing to a real <code>Person</code> object in the heap.</li>
-</ul>
-<hr>
-<h2 id="multidimensional-arrays"><strong>Multidimensional Arrays</strong></h2>
-<p>Multidimensional arrays contain other arrays as elements. In Java, arrays can have multiple dimensions, with the <strong>two-dimensional array</strong> being the most common.</p>
-<h3 id="example-of-a-two-dimensional-array"><strong>Example of a Two-Dimensional Array</strong></h3>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// Creating a 2D integer array (matrix)</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> matrix <span class="token operator">=</span> <span class="token punctuation">{</span>
-            <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
-            <span class="token punctuation">{</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">}</span>
-        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        // Initializing the objects
+        people[0] = new Person("Carlos");
+        people[1] = new Person("Maria");
+        people[2] = new Person("John");
 
-        <span class="token comment">// Iterating and printing the values</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> matrix<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>matrix<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+        // Accessing the objects inside the array
+        for (Person p : people) {
+            System.out.println(p.name);
+        }
+    }
+}
 
-</code></pre>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-       String<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> ninjasEAldeias <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  
+```
+
+### **Explanation**
+
+-   The array `people` contains references to `Person` objects, not the objects themselves.
+-   Each element of the array holds a memory address pointing to a real `Person` object in the heap.
+
+----------
+
+## **Multidimensional Arrays**
+
+Multidimensional arrays contain other arrays as elements. In Java, arrays can have multiple dimensions, with the **two-dimensional array** being the most common.
+
+### **Example of a Two-Dimensional Array**
+
+```
+public class Main {
+    public static void main(String[] args) {
+        // Creating a 2D integer array (matrix)
+        int[][] matrix = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        // Iterating and printing the values
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+```
+
+```
+public class Main {
+    public static void main(String[] args) {
+       String[][] ninjasEAldeias = new String[3][3];  
   
-		ninjasEAldeias<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Konoha"</span><span class="token punctuation">;</span>  
-		ninjasEAldeias<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Naruto"</span><span class="token punctuation">;</span>  
-		ninjasEAldeias<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Sasuke"</span><span class="token punctuation">;</span>  
+		ninjasEAldeias[0][0] = "Konoha";  
+		ninjasEAldeias[0][1] = "Naruto";  
+		ninjasEAldeias[0][2] = "Sasuke";  
 		  
-		ninjasEAldeias<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Nevoa"</span><span class="token punctuation">;</span>  
-		ninjasEAldeias<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Zabuza"</span><span class="token punctuation">;</span>  
-		ninjasEAldeias<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Haku"</span><span class="token punctuation">;</span>  
+		ninjasEAldeias[1][0] = "Nevoa";  
+		ninjasEAldeias[1][1] = "Zabuza";  
+		ninjasEAldeias[1][2] = "Haku";  
 		  
-		ninjasEAldeias<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Deserto"</span><span class="token punctuation">;</span>  
-		ninjasEAldeias<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Gaara"</span><span class="token punctuation">;</span>  
-		ninjasEAldeias<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"Temari"</span><span class="token punctuation">;</span>  
+		ninjasEAldeias[2][0] = "Deserto";  
+		ninjasEAldeias[2][1] = "Gaara";  
+		ninjasEAldeias[2][2] = "Temari";  
   
-		<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> ninjasEAldeias<span class="token punctuation">.</span>length <span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
-		    System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Aldeia: "</span> <span class="token operator">+</span> ninjasEAldeias<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span>  <span class="token string">" 1 - "</span> <span class="token operator">+</span> ninjasEAldeias<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> <span class="token string">" 2 - "</span> <span class="token operator">+</span> ninjasEAldeias<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
-		<span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+		for (int i = 0; i < ninjasEAldeias.length ; i++) {  
+		    System.out.println("Aldeia: " + ninjasEAldeias[i][0] + " " +  " 1 - " + ninjasEAldeias[i][1] + " " + " 2 - " + ninjasEAldeias[i][2]);  
+		}
+    }
+}
 
-</code></pre>
-<h3 id="explanation-1"><strong>Explanation</strong></h3>
-<ul>
-<li>The array <code>matrix</code> is an array of arrays (<code>int[][]</code>).</li>
-<li>Each element <code>matrix[i]</code> is an array of integers.</li>
-<li>Elements are accessed using two indices: <code>matrix[i][j]</code>.</li>
-</ul>
-<h3 id="jagged-arrays-irregular-multidimensional-arrays"><strong>Jagged Arrays (Irregular Multidimensional Arrays)</strong></h3>
-<p>Unlike languages like C, Java allows multidimensional arrays to have irregular sizes.</p>
-<pre class=" language-java"><code class="prism  language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token comment">// Creating a jagged 2D array</span>
-        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> jaggedArray <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        jaggedArray<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-        jaggedArray<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
-        jaggedArray<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token number">6</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+```
 
-        <span class="token comment">// Iterating through the array</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> jaggedArray<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> jaggedArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>jaggedArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
+### **Explanation**
 
-</code></pre>
-<h3 id="explanation-2"><strong>Explanation</strong></h3>
-<ul>
-<li>Each row can have a different number of columns.</li>
-<li>This provides flexibility and can save memory.</li>
-</ul>
-<hr>
+-   The array `matrix` is an array of arrays (`int[][]`).
+-   Each element `matrix[i]` is an array of integers.
+-   Elements are accessed using two indices: `matrix[i][j]`.
 
+
+### **Jagged Arrays (Irregular Multidimensional Arrays)**
+
+Unlike languages like C, Java allows multidimensional arrays to have irregular sizes.
+
+```
+public class Main {
+    public static void main(String[] args) {
+        // Creating a jagged 2D array
+        int[][] jaggedArray = new int[3][];
+        jaggedArray[0] = new int[]{1, 2};
+        jaggedArray[1] = new int[]{3, 4, 5};
+        jaggedArray[2] = new int[]{6};
+
+        // Iterating through the array
+        for (int i = 0; i < jaggedArray.length; i++) {
+            for (int j = 0; j < jaggedArray[i].length; j++) {
+                System.out.print(jaggedArray[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+```
+
+### **Explanation**
+
+-   Each row can have a different number of columns.
+-   This provides flexibility and can save memory.
+
+----------
