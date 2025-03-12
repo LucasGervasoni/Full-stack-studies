@@ -51,25 +51,15 @@ class Motorcycle implements Vehicle {
 <p>Now, any <code>Vehicle</code> (Car or Motorcycle) can <strong>accelerate and brake</strong>, as they follow the interface contract.</p>
 <hr>
 <h3 id="difference-between-interface-and-class"><strong>Difference Between Interface and Class</strong></h3>
-<p>Characteristic</p>
-<p>Interface</p>
-<p>Class</p>
-<p><strong>Usage</strong></p>
-<p>Defines a contract (only methods without implementation)</p>
-<p>Defines an object with attributes and behaviors</p>
-<p><strong>Method Implementation</strong></p>
-<p>Has no implementation (except <code>default</code> or <code>static</code> methods)</p>
-<p>Contains method implementations</p>
-<p><strong>Inheritance</strong></p>
-<p>A class can implement multiple interfaces</p>
-<p>A class can only inherit from one other class</p>
-<p><strong>Access Modifiers</strong></p>
-<p>Methods are automatically <code>public abstract</code></p>
-<p>Can have <code>public</code>, <code>private</code>, and <code>protected</code> methods</p>
-<p><strong>Objects</strong></p>
-<p>Cannot be instantiated directly</p>
-<p>Can be instantiated normally</p>
-<hr>
+
+| Characteristic | Interface | Class |
+| -------- | ----- | ----------- |
+| **Usage** | Defines a contract (only methods without implementation) | Defines an object with attributes and behaviors |
+| **Method Implementation** | Has no implementation (except `default` or `static` methods) | Contains method implementations |
+| **Inheritance** | A class can implement multiple interfaces | A class can only inherit from one other class |
+| **Access Modifiers** | Methods are automatically `public abstract` | Can have `public`, `private`, and `protected` methods |
+| **Objects** | Cannot be instantiated directly | Can be instantiated normally |
+
 <h3 id="conclusion"><strong>Conclusion</strong></h3>
 <ul>
 <li><strong>Classes</strong> are used to create objects with attributes and methods.</li>
