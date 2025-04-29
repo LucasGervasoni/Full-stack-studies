@@ -1,3 +1,8 @@
+# Crie um código que conta o número de vogais de um bloco de texto
+# qualquer. O código deve desconsiderar letras maiúsculas/minúsculas,
+# isto é, "a" e "A" contam da mesma forma.
+# O texto pode ser colado diretamente como um string no código.
+
 texto = """
 Python é uma linguagem de programação de alto nível,[5] interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991.[1] Atualmente, possui um modelo de desenvolvimento comunitário, aberto e gerenciado pela organização sem fins lucrativos Python Software Foundation. Apesar de várias partes da linguagem possuírem padrões e especificações formais, a linguagem, como um todo, não é formalmente especificada. O padrão na pratica é a implementação CPython.
 
@@ -7,3 +12,11 @@ Python é uma linguagem de propósito geral de alto nível, multiparadigma, supo
 
 O nome Python teve a sua origem no grupo humorístico britânico Monty Python,[8] criador do programa Monty Python's Flying Circus, embora muitas pessoas façam associação com o réptil do mesmo nome (em português, píton ou pitão).
 """
+
+texto.lower()  # Converte o texto para minúsculas
+
+vogais = ['a', 'e', 'i', 'o', 'u', 'á', 'é', 'í', 'ó', 'ú', 'ã', 'õ']
+
+for vogal in vogais:
+    # Contando o número de vogais no texto
+    print(f"A letra '{vogal}' aparece {texto.count(vogal)} vezes.")
