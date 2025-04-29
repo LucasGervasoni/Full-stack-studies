@@ -16,5 +16,6 @@ I've been following the backend roadmap from Roadmap.sh, It's a good way to stud
 
 - Frontend: https://roadmap.sh/frontend
 - Backend: https://roadmap.sh/backend
+- Data Analyst: https://roadmap.sh/data-analyst
 
 And I'm going to following more, like: Java, Spring, SQL, AWS, Data Structures, Algorithms, and more...
