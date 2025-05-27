@@ -7,6 +7,10 @@ app = Flask(__name__)
 def hello_world():
     return "<h1>Hello World!</h1>"
 
+@app.route("/sobre")  # Outra rota
+def sobre():
+    return "<h1>Sobre</h1><p>Esta é a minha primeira aplicação Flask!</p>"
+
 if __name__ == "__main__":
     # Executa o servidor Flask na porta 5000
     
