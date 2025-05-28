@@ -1,2 +1,4 @@
 Backend/python/Flask/venv
+Backend/python/PyAutoGUI/venv
+Backend/python/PyAutoGUI/.env
 Backend/python/Flask/requirements.txt
